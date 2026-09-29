@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+.memberJoin,
+.memberLogin,
+.memberInfo {
+    width: 100%;
+    min-height: 560px;
+    padding: 30px 42px 42px;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.memberInfoList {
+    width: min(100%, 700px);
+    overflow: hidden;
+    margin: 34px auto 0;
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+}
+
+.memberInfoList .infoRow {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    min-height: 58px;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.memberInfoList .infoRow:last-child {
+    border-bottom: 0;
+}
+
+.memberInfoList .infoRow strong,
+.memberInfoList .infoRow span {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+}
+
+.memberInfoList .infoRow strong {
+    background: var(--color-sage-light);
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.memberInfoList .infoRow span {
+    color: var(--color-text);
+}
+
+.memberInfoList .editField {
+    display: flex;
+    align-items: center;
+    padding: 9px 18px;
+}
+
+.memberInfoList .editField input {
+    width: 240px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.memberInfoList .emailField {
+    gap: 8px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.memberInfoList .emailField .emailSeparator {
+    padding: 0;
+}
+
+.memberInfoList .emailField input {
+    width: 145px;
+    min-width: 0;
+}
+
+.memberInfoList .emailField select {
+    width: 128px;
+    height: 40px;
+    padding: 0 8px;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.memberInfoButtons {
+    width: min(100%, 700px);
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: 18px auto 0;
+}
+
+.memberInfoButtons .button {
+    min-width: 120px;
+}
+
+.memberInfoButtons .memberExitButton {
+    border-color: #b84b43;
+    background: #b84b43;
+    color: #fff;
+}
+
+.memberInfoButtons .memberExitButton:hover {
+    border-color: #963b35;
+    background: #963b35;
+}
+
+.memberJoin form,
+.memberLogin form {
+    width: min(100%, 700px);
+    margin: 34px auto 0;
+}
+
+.memberJoin table,
+.memberLogin table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.memberJoin tr:not(:last-child),
+.memberLogin tr {
+    border-bottom: 1px solid var(--color-line);
+}
+
+.memberJoin th,
+.memberLogin th {
+    width: 170px;
+    padding: 18px 16px;
+    color: var(--color-primary);
+    font-size: 14px;
+    text-align: left;
+}
+
+.memberJoin td,
+.memberLogin td {
+    padding: 14px 10px;
+}
+
+.memberJoin td input[type="text"],
+.memberJoin td input[type="password"],
+.memberLogin td input {
+    width: min(100%, 260px);
+    height: 42px;
+    padding: 0 12px;
+}
+
+.memberJoin td select {
+    height: 42px;
+    padding: 0 10px;
+}
+
+.memberJoin td small {
+    display: block;
+    margin-top: 7px;
+    color: var(--color-muted);
+    font-size: 12px;
+}
+
+.memberJoin .joinFieldLine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.memberJoin .idFieldLine .idInput {
+    width: 200px;
+}
+
+.memberJoin .idCheckButton {
+    flex: none;
+}
+
+.memberJoin .idCheckResult {
+    width: 180px;
+    min-width: 0;
+    margin-left: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-primary);
+    font-size: 12px;
+}
+
+.memberJoin .emailJoinField input {
+    width: 145px;
+    min-width: 0;
+}
+
+.memberJoin .emailJoinField select {
+    width: 128px;
+    flex: none;
+}
+
+.emailSeparator {
+    flex: none;
+    color: var(--color-muted);
+}
+
+.memberJoin tr:last-child th {
+    padding-top: 28px;
+    text-align: center;
+}
+
+.memberJoin tr:last-child .button {
+    min-width: 130px;
+}
+
+.memberLogin form {
+    width: min(100%, 520px);
+}
+
+.memberLogin .find {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 22px;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.memberLogin .find a:hover {
+    color: var(--color-primary);
+}
+
+#loginButtonArea {
+    width: 120px;
+    padding-left: 20px;
+}
+
+#loginButtonArea input {
+    width: 100%;
+    height: 96px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .memberJoin,
+    .memberLogin,
+    .memberInfo {
+        padding: 24px 18px 32px;
+    }
+
+    .memberInfoList .infoRow {
+        grid-template-columns: 105px minmax(0, 1fr);
+    }
+
+    .memberInfoList .editField {
+        padding: 9px 10px;
+    }
+
+    .memberInfoList .emailField {
+        flex-wrap: nowrap;
+    }
+
+    .memberInfoList .emailField input {
+        width: 110px;
+    }
+
+    .memberInfoList .emailField select {
+        width: 105px;
+    }
+
+    .memberJoin th,
+    .memberLogin th {
+        width: 105px;
+        padding-left: 6px;
+    }
+
+    .memberJoin .joinFieldLine {
+        flex-wrap: wrap;
+    }
+
+    .memberJoin .idCheckResult {
+        width: 150px;
+    }
+}

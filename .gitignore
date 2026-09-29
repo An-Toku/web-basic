@@ -1,0 +1,11 @@
+/build/
+/target/
+/bin/
+
+*.class
+*.log
+
+.metadata/
+
+src/main/webapp/attach/notice/*
+!src/main/webapp/attach/notice/.gitkeep

@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+.list,
+.noticePage {
+    width: 100%;
+    min-height: 560px;
+    padding: 30px 36px 36px;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.list .formSearchArea {
+    min-height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.formSearchArea p {
+    flex: none;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.formSearchArea form {
+    flex: 1;
+}
+
+.formSearchArea .searchInputs {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.searchInputs input[type="text"] {
+    width: min(240px, 100%);
+    height: 38px;
+    padding: 0 11px;
+}
+
+.searchInputs select {
+    height: 38px;
+    padding: 0 30px 0 10px;
+}
+
+.list table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid var(--color-primary);
+    table-layout: fixed;
+}
+
+.list table thead {
+    height: 48px;
+    border-bottom: 1px solid var(--color-line);
+    background: var(--color-sage-light);
+    color: var(--color-primary);
+    font-size: 13px;
+}
+
+.list table tbody tr {
+    height: 52px;
+    border-bottom: 1px solid var(--color-line);
+    transition: background-color 0.2s ease;
+}
+
+.list table tbody tr:hover {
+    background: #fbfaf6;
+}
+
+.list table td,
+.list table tbody th {
+    overflow: hidden;
+    padding: 0 8px;
+    color: var(--color-muted);
+    font-size: 13px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list table td:nth-child(2) {
+    color: var(--color-text);
+    text-align: left;
+}
+
+.list table td:nth-child(2) a:hover {
+    color: var(--color-primary);
+}
+
+.list table img {
+    width: 15px;
+    margin: 0 auto;
+}
+
+.list .paging {
+    position: relative;
+    min-height: 62px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+.paging a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    border: 1px solid var(--color-line);
+    border-radius: 7px;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.paging a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.paging .write {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    min-width: 74px;
+    height: 38px;
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.noticePage .formTitle {
+    margin-bottom: 26px;
+}
+
+.noticePage form,
+.noticeDetail {
+    width: 100%;
+}
+
+.noticeButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.noticeButtons .button {
+    min-width: 72px;
+}
+
+.noticeNavigation {
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+    background: var(--color-surface);
+    box-shadow: 0 2px 10px rgba(36, 72, 59, 0.04);
+}
+
+.navigationRow {
+    min-height: 54px;
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: stretch;
+    cursor: pointer;
+}
+
+.navigationRow + .navigationRow {
+    border-top: 1px solid var(--color-line);
+}
+
+.navigationButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-right: 1px solid var(--color-line);
+    background: var(--color-sage-light);
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.navigationTitle {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px;
+    background: #fffdf8;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navigationRow:first-child .navigationTitle {
+    border-radius: 0 11px 0 0;
+}
+
+.navigationRow:last-child .navigationTitle {
+    border-radius: 0 0 11px 0;
+}
+
+.noticeDetail {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+}
+
+.detailTitle {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--color-line);
+    background: var(--color-sage-light);
+}
+
+.detailTitle h2 {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.detailInfo {
+    min-height: 44px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 9px 18px;
+    border-bottom: 1px solid var(--color-line);
+    color: var(--color-muted);
+    font-size: 12px;
+}
+
+.detailInfo .infoItem {
+    display: flex;
+    gap: 7px;
+}
+
+.detailInfo .label,
+.detailFile .label {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.detailContent {
+    min-height: 300px;
+    padding: 28px 22px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.detailFile {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 18px;
+    border-top: 1px solid var(--color-line);
+    background: #fbfaf6;
+    font-size: 13px;
+}
+
+.detailFile a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.noticeForm form {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+}
+
+.noticeForm .formRow {
+    display: grid;
+    grid-template-columns: 125px minmax(0, 1fr);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.noticeForm .formRow > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 10px;
+    background: var(--color-sage-light);
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.noticeForm .titleInput {
+    height: 42px;
+    margin: 11px 14px;
+    padding: 0 12px;
+}
+
+.noticeForm .contentRow textarea {
+    height: 310px;
+    margin: 14px;
+    padding: 13px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.noticeForm .fileRow {
+    min-height: 66px;
+}
+
+.noticeForm .fileRow > input[type="file"] {
+    margin: 18px 14px;
+}
+
+.noticeForm .fileArea {
+    display: flex;
+    align-items: center;
+    padding: 11px 14px;
+}
+
+.noticeForm .fileArea input[type="file"] {
+    display: none;
+}
+
+.noticeForm #attachName {
+    width: 190px;
+    height: 38px;
+    margin-left: 8px;
+    padding: 0 10px;
+    background: #fbfaf6;
+}
+
+.noticeForm .fileDeleteButton {
+    margin-left: 7px;
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+}
+
+.noticeForm form > .noticeButtons {
+    margin: 0;
+    padding: 18px;
+    background: #fbfaf6;
+}
+
+@media (max-width: 720px) {
+    .list,
+    .noticePage {
+        padding: 24px 16px;
+    }
+
+    .list .formSearchArea {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+    }
+
+    .formSearchArea form,
+    .formSearchArea .searchInputs {
+        width: 100%;
+    }
+
+    .list table th:nth-child(3),
+    .list table td:nth-child(3),
+    .list table th:nth-child(4),
+    .list table td:nth-child(4),
+    .list table th:nth-child(6),
+    .list table td:nth-child(6) {
+        display: none;
+    }
+
+    .noticeForm .formRow {
+        grid-template-columns: 92px minmax(0, 1fr);
+    }
+}

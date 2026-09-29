@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+.allServices .dropdownMenu {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    z-index: 20;
+    display: none;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--color-line);
+    border-radius: 0 0 12px 12px;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.allServices:hover .dropdownMenu {
+    display: block;
+}
+
+.dropdownMenu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownMenu ul li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    padding: 10px 6px;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 13px;
+}
+
+.dropdownMenu ul li:last-child {
+    border-bottom: 0;
+}
+
+.dropdownMenu .title {
+    grid-column: 1 / -1;
+    color: var(--color-primary);
+    font-size: 15px;
+}
+
+.button,
+.idCheckButton,
+.fileButton,
+.fileDeleteButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 16px;
+    border: 1px solid var(--color-primary);
+    border-radius: 9px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 650;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover,
+.idCheckButton:hover,
+.fileButton:hover,
+.fileDeleteButton:hover {
+    border-color: var(--color-primary-dark);
+    background: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.memberBadge {
+    display: inline-flex;
+    align-items: center;
+    flex: none;
+    min-height: 24px;
+    margin-left: 0;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: var(--color-sage-light);
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.invisibleTextBox {
+    border: 0;
+    background: none;
+    pointer-events: none;
+}
+
+.titleBox {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.titleBox .title {
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.formTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.formTitle h1 {
+    color: var(--color-primary);
+    font-size: 27px;
+    font-weight: 750;
+}
+
+.profileBar,
+.noticeBox {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.profileBar {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px 14px;
+    padding: 22px;
+}
+
+.profileImg {
+    width: 92px;
+    height: 92px;
+    grid-row: 1 / span 2;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileBar .smallInfo {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    align-self: end;
+    gap: 8px;
+}
+
+.smallInfo .name {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    font-size: 19px;
+    font-weight: 750;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileGreeting {
+    align-self: start;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.profileBar .content {
+    grid-column: 1 / -1;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-line);
+    font-size: 13px;
+}
+
+.profileBar .content strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--color-muted);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.profileBar .content a,
+.profileBar .content p {
+    color: var(--color-text);
+}
+
+.noticeBox .content {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 18px 20px 21px;
+}
+
+.noticeBox .content a {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.noticeBox .content a:hover span {
+    color: var(--color-primary);
+}
+
+.noticeBox .content span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.noticeBox .content small {
+    flex: none;
+    color: #99978f;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: #fff;
+    outline: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(36, 72, 59, 0.1);
+}
